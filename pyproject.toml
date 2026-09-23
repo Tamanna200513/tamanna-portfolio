@@ -1,2 +1,15 @@
+[project]
+name = "tamanna-portfolio"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "Django==6.1.1",
+    "dj-database-url==3.1.2",
+    "psycopg2-binary==2.9.13",
+    "asgiref==3.12.1",
+    "sqlparse==0.6.0",
+    "tzdata==2026.3"
+]
+
 [tool.vercel.scripts]
 build = "python manage.py migrate"
