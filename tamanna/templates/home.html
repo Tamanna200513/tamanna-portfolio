@@ -1,0 +1,301 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tamanna Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'tamanna/css/style.css' %}">
+</head>
+
+
+<body>
+
+    <!-- ================= BACKGROUND ================= -->
+
+    <div class="background-overlay"></div>
+
+    <!-- <div class="code-bg code-left">
+        <span>&lt;/&gt;</span>
+        <span>def developer():</span>
+        <span>print("Hello World")</span>
+        <span>class Portfolio:</span>
+        <span>return success</span>
+    </div>
+
+    <div class="code-bg code-right">
+        <span>const developer = {</span>
+        <span>name: "Tamanna"</span>
+        <span>role: "Software Engineer"</span>
+        <span>skills: ["Python"]</span>
+        <span>};</span>
+    </div> -->
+
+
+    <!-- ================= LANDING SCREEN ================= -->
+
+    <main class="landing-screen">
+
+        <div class="developer-badge">
+            <span></span>
+            SOFTWARE ENGINEER
+        </div>
+
+
+        <!-- CLICKABLE PROFILE -->
+
+        <div class="profile-container" id="openPortfolio">
+
+            <div class="profile-glow"></div>
+
+            <div class="profile-image">
+                <img src="{% static 'tamanna/images/profile.jpeg' %}"
+                     alt="Tamanna">
+            </div>
+
+        </div>
+
+
+        <h1 class="portfolio-title" id="openPortfolioText">
+            Tamanna Portfolio
+        </h1>
+
+
+        <p class="portfolio-subtitle">
+            SOFTWARE ENGINEER • DEVELOPER • CREATIVE THINKER
+        </p>
+
+
+        <div class="click-message">
+            <span class="mouse-icon">⌁</span>
+
+            <span>
+                Click on my photo or name to explore
+            </span>
+        </div>
+
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+
+    </main>
+
+
+
+    <!-- ================================================= -->
+    <!--                 PORTFOLIO MODAL                   -->
+    <!-- ================================================= -->
+
+    <div class="portfolio-modal" id="portfolioModal">
+
+        <div class="modal-background"></div>
+
+
+        <div class="portfolio-menu">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button class="close-button" id="closePortfolio">
+                ×
+            </button>
+
+
+            <!-- HEADER -->
+
+            <div class="menu-header">
+
+                <p>
+                    WELCOME TO
+                </p>
+
+                <h2>
+                    Tamanna Portfolio
+                </h2>
+
+                <div class="header-line">
+                    <span></span>
+                    <b>♥</b>
+                    <span></span>
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CARDS ================= -->
+
+            <div class="menu-content">
+
+
+                <!-- HOME -->
+
+                <a href="{% url 'home' %}" class="menu-card home-card">
+
+                    <div class="card-icon">
+                        🏠
+                    </div>
+
+                    <h3>
+                        Home
+                    </h3>
+
+                    <div class="card-line"></div>
+
+                    <p>
+                        Welcome to my
+                        portfolio
+                    </p>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- ABOUT -->
+
+                <a href="{% url 'about' %}" class="menu-card about-card">
+
+                    <div class="card-icon">
+                        👩‍💻
+                    </div>
+
+                    <h3>
+                        About
+                    </h3>
+
+                    <div class="card-line"></div>
+
+                    <p>
+                        Know more
+                        about me
+                    </p>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- CENTER DEVELOPER -->
+
+                <div class="developer-center">
+
+                    <div class="thinking-circle"></div>
+
+                    <div class="thought-bubble">
+                        &lt;/&gt;
+                    </div>
+
+                    <img
+                        src="{% static 'tamanna/images/developer.png' %}"
+                        alt="Developer">
+
+                    <div class="code-symbol symbol-one">
+                        { }
+                    </div>
+
+                    <div class="code-symbol symbol-two">
+                        &lt;/&gt;
+                    </div>
+
+                    <div class="code-symbol symbol-three">
+                        01
+                    </div>
+
+                </div>
+
+
+
+                <!-- RESUME -->
+
+                <a href="{% url 'resume' %}" class="menu-card resume-card">
+
+                    <div class="card-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Resume
+                    </h3>
+
+                    <div class="card-line"></div>
+
+                    <p>
+                        Skills &
+                        experience
+                    </p>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- CONTACT -->
+
+                <a href="{% url 'contact' %}" class="menu-card contact-card">
+
+                    <div class="card-icon">
+                        ✉
+                    </div>
+
+                    <h3>
+                        Contact Us
+                    </h3>
+
+                    <div class="card-line"></div>
+
+                    <p>
+                        Get in touch
+                        with me
+                    </p>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+
+            <div class="menu-footer">
+
+                <p>
+                    Turning ideas into reality through code
+                    <span>&lt;/&gt;</span>
+                </p>
+
+                <div>
+                    ♥
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="{% static 'tamanna/js/script.js' %}"></script>
+
+</body>
+
+</html>

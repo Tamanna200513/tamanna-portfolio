@@ -1,0 +1,927 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: #ffffff;
+
+    background: #070b16;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   BACKGROUND IMAGE
+   IMPORTANT
+========================================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    top: -20px;
+    left: -20px;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 8, 20, 0.35),
+            rgba(5, 8, 20, 0.60)
+        ),
+        url("../images/profile-bg.jpg");
+
+        filter: blur(8px);
+
+         transform: scale(1.02);
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+
+/* =========================================================
+   BACKGROUND DARK OVERLAY
+========================================================= */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(65, 120, 255, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(155, 90, 255, 0.12),
+            transparent 35%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================
+   GLOW
+========================= */
+
+.contact-glow {
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    filter: blur(130px);
+
+    opacity: .15;
+
+    pointer-events: none;
+
+}
+
+
+.glow-one {
+
+    background: #7654ff;
+
+    left: -180px;
+    top: -150px;
+
+}
+
+
+.glow-two {
+
+    background: #ff4eaf;
+
+    right: -200px;
+    bottom: -180px;
+
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    padding: 28px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    width: 56px;
+    height: 56px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+/* Circular logo */
+
+.logo-mark {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #2a4077 0%,
+            #121a31 55%,
+            #070b16 100%
+        );
+
+    border: 2px solid rgba(120, 190, 255, 0.9);
+
+    box-shadow:
+        0 0 8px rgba(90, 180, 255, 0.8),
+        0 0 22px rgba(110, 90, 255, 0.45),
+        inset 0 0 15px rgba(100, 170, 255, 0.15);
+
+    transition: 0.35s ease;
+}
+
+
+/* Outer ring */
+
+.logo-mark::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -5px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(150, 110, 255, 0.65);
+
+    opacity: 0.8;
+
+    transition: 0.35s ease;
+}
+
+
+/* Small glowing dot */
+
+.logo-mark::after {
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    top: 5px;
+    right: 7px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 5px #ffffff,
+        0 0 12px #70bfff;
+}
+
+
+/* T */
+
+.logo-t {
+    position: relative;
+
+    z-index: 3;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 6px rgba(100, 190, 255, 0.95),
+        0 0 15px rgba(120, 100, 255, 0.75);
+}
+
+
+/* Code brackets */
+
+.logo-bracket {
+    position: absolute;
+
+    z-index: 4;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    color: #79caff;
+
+    text-shadow:
+        0 0 6px rgba(90, 190, 255, 0.9);
+}
+
+
+.logo-bracket.left {
+    left: 8px;
+    top: 20px;
+}
+
+
+.logo-bracket.right {
+    right: 5px;
+    bottom: 16px;
+}
+
+
+/* Logo hover */
+
+.logo:hover .logo-mark {
+    transform: scale(1.1) rotate(6deg);
+
+    border-color: #9ddcff;
+
+    box-shadow:
+        0 0 10px rgba(80, 190, 255, 0.95),
+        0 0 30px rgba(130, 90, 255, 0.75),
+        0 0 50px rgba(80, 160, 255, 0.25);
+}
+
+
+.logo:hover .logo-mark::before {
+    transform: rotate(-20deg);
+
+    border-color: #b08cff;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+    text-decoration: none;
+
+    color: #e4e9f5;
+
+    padding: 10px 22px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+
+.back-btn:hover {
+    color: #ffffff;
+
+    border-color: rgba(130, 190, 255, 0.7);
+
+    background: rgba(100, 150, 255, 0.15);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.contact-container {
+
+    width: 86%;
+
+    max-width: 1250px;
+
+    margin: 50px auto;
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+
+/* =========================
+   LEFT
+========================= */
+
+.label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #b797ff;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+}
+
+
+.label span {
+
+    width: 35px;
+
+    height: 2px;
+
+    background: #b797ff;
+
+}
+
+
+.contact-info h1 {
+
+     margin-top:20px;
+
+    font-size:
+        clamp(45px, 5vw, 68px);
+
+    font-weight:300;
+
+    line-height:1.15;
+
+    padding-bottom:8px;
+
+    overflow:visible;
+
+}
+
+
+.contact-info h1 strong {
+
+    display:block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8ddcff,
+            #b891ff,
+            #ff91d4
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    font-weight:600;
+
+    line-height:1.15;
+
+    padding-bottom:3px;
+
+}
+
+
+.contact-info > p {
+
+    margin-top: 25px;
+
+    color: #949db4;
+
+    line-height: 1.9;
+
+    max-width: 550px;
+
+}
+
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.contact-details {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.detail {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.detail-icon {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    border: 1px solid
+        rgba(180,150,255,.25);
+
+    color: #c3a6ff;
+
+    background:
+        rgba(255,255,255,.04);
+
+    font-family: monospace;
+
+}
+
+
+.detail div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.detail small {
+
+    color: #737d94;
+
+    letter-spacing: 2px;
+
+    font-size: 9px;
+
+}
+
+
+.detail span {
+
+    color: #d8ddea;
+
+}
+
+
+
+/* =========================
+   FORM BOX
+========================= */
+
+.contact-form-box {
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    border: 1px solid
+        rgba(190,160,255,.2);
+
+    background:
+        rgba(255,255,255,.045);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.35);
+
+}
+
+
+.form-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.form-header span {
+
+    color: #a886ff;
+
+    font-family: monospace;
+
+}
+
+
+.form-header h2 {
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+}
+
+
+
+/* =========================
+   INPUT
+========================= */
+
+.input-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    color: #aab3c7;
+
+    font-size: 13px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.input-group input,
+.input-group textarea {
+
+    width: 100%;
+
+    border: 1px solid
+        rgba(255,255,255,.12);
+
+    background:
+        rgba(0,0,0,.18);
+
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 15px 16px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+
+.input-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.input-group input:focus,
+.input-group textarea:focus {
+
+    border-color: #a981ff;
+
+    box-shadow:
+        0 0 20px
+        rgba(160,110,255,.12);
+
+}
+
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+
+    color: #626b7f;
+
+}
+
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.form-message {
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    font-size: 13px;
+
+}
+
+
+.form-message.success {
+
+    background:
+        rgba(70,220,140,.10);
+
+    border: 1px solid
+        rgba(70,220,140,.3);
+
+    color: #8effbb;
+
+}
+
+
+.form-message.error {
+
+    background:
+        rgba(255,80,120,.10);
+
+    border: 1px solid
+        rgba(255,80,120,.3);
+
+    color: #ff9aad;
+
+}
+
+
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.send-btn {
+
+    width: 100%;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 16px 20px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7654dc,
+            #b46bda
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    transition: .3s;
+
+}
+
+
+.send-btn b {
+
+    font-size: 20px;
+
+}
+
+
+.send-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(130,80,220,.25);
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    width: 86%;
+
+    margin: auto;
+
+    padding: 20px 0 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #656e82;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .contact-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .contact-info {
+
+        text-align: center;
+
+    }
+
+
+    .label {
+
+        justify-content: center;
+
+    }
+
+
+    .contact-details {
+
+        align-items: center;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .contact-container {
+
+        width: 90%;
+
+    }
+
+
+    .contact-form-box {
+
+        padding: 25px 18px;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+    }
+
+}
+
+/* =========================
+   EMAIL & ROLE VISIBILITY FIX
+========================= */
+
+/* Email and Role ki actual value */
+.contact-details .detail > div:last-child span {
+    color: #e8edf7 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* EMAIL / ROLE heading bhi thoda visible */
+.contact-details .detail > div:last-child small {
+    color: #aeb8cc !important;
+    font-size: 9px !important;
+    font-weight: 500 !important;
+    letter-spacing: 3px;
+    opacity: 1 !important;
+}
+
+/* Email ke liye thoda extra brightness */
+.contact-details .detail:first-child > div:last-child span {
+    color: #f0f3fa !important;
+}
+
+/* Role ke liye */
+.contact-details .detail:nth-child(2) > div:last-child span {
+    color: #e8edf7 !important;
+}

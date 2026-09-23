@@ -1,0 +1,476 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Resume | Tamanna Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{% static 'tamanna/css/resume.css' %}">
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+   <a href="{% url 'home' %}" class="logo">
+    <div class="logo-mark">
+        <span class="logo-bracket left">&lt;</span>
+
+        <span class="logo-t">T</span>
+
+        <span class="logo-bracket right">/&gt;</span>
+    </div>
+</a>
+
+    <a href="{% url 'home' %}" class="back-btn">
+        ← Back
+    </a>
+
+</nav>
+
+
+
+<!-- MAIN RESUME -->
+
+<main class="resume-container">
+
+
+    <!-- =========================
+         LEFT SIDE
+    ========================== -->
+
+    <section class="resume-content">
+
+
+        <!-- Heading -->
+
+        <div class="resume-label">
+
+            <span></span>
+
+            MY RESUME
+
+        </div>
+
+
+        <h1>
+
+            Tamanna
+
+            <strong>
+                Software Engineer
+            </strong>
+
+        </h1>
+
+
+        <p class="resume-intro">
+
+            A passionate developer focused on building
+            clean, scalable and meaningful digital
+            experiences.
+
+        </p>
+
+
+
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
+
+        <div class="resume-section">
+
+            <div class="section-title">
+
+                <span class="number">
+                    01
+                </span>
+
+                <h2>
+                    Experience
+                </h2>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="experience-info">
+
+                    <span class="experience-date">
+                        Feb 2026 — Oct 2026
+                    </span>
+
+                    <h3>
+                        Software Engineer Intern
+                    </h3>
+
+                    <h4>
+                        Indevconsultancy Pvt. Ltd.
+                    </h4>
+
+                    <p>
+                        Software Development • PHP •
+                        Python (FastAPI) • Postgresql • MySQL •
+                        Team Leadership • React.js
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD MORE EXPERIENCE HERE -->
+
+            <div class="experience-card">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="experience-info">
+
+                    <span class="experience-date">
+                        Oct 2025 — Dec 2025
+                    </span>
+
+                    <h3>
+                        Backend Developer
+                    </h3>
+
+                    <h4>
+                        NexStay Technologies Pvt. Ltd.
+                    </h4>
+
+                    <p>
+                        Backend Development • REST APIs • Postman • Node.js • Express.js • MongoDB • Team Collaboration
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <div class="resume-section">
+
+
+            <div class="section-title">
+
+                <span class="number">
+                    02
+                </span>
+
+                <h2>
+                    Projects
+                </h2>
+
+            </div>
+
+
+            <div class="projects-list">
+
+
+                <div class="project-item">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        NGO Projects (FLP, AK, MGJ, WWW)
+                    </h3>
+
+                    <b>
+                        →
+                    </b>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        SALP - Online Examination & Certificate Generation System                    
+                    </h3>
+
+                    <b>
+                        →
+                    </b>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        HealthWise
+                    </h3>
+
+                    <b>
+                        →
+                    </b>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Smart Internship & Skill Matcher Platform
+                    </h3>
+
+                    <b>
+                        →
+                    </b>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             DOWNLOAD
+        ========================== -->
+
+        <div class="download-area">
+
+
+            <a href="{% static 'tamanna/files/Tamanna_Tiwari_Software_Engineer_Resume.pdf' %}"
+               class="download-btn"
+               download>
+
+                <span class="download-icon">
+                    ↓
+                </span>
+
+                <span>
+                    Download Resume
+                </span>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <span class="download-note">
+                PDF • Updated 2026
+            </span>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         RIGHT SIDE
+    ========================== -->
+
+    <section class="resume-character">
+
+
+        <div class="character-background">
+
+            <span class="code-symbol symbol-one">
+                &lt;/&gt;
+            </span>
+
+            <span class="code-symbol symbol-two">
+                { }
+            </span>
+
+            <span class="code-symbol symbol-three">
+                01
+            </span>
+
+            <span class="code-symbol symbol-four">
+                Python
+            </span>
+
+        </div>
+
+
+
+        <!-- Floating card -->
+
+        <div class="floating-card">
+
+            <span>
+                AVAILABLE FOR
+            </span>
+
+            <strong>
+                New Opportunities
+            </strong>
+
+            <small>
+                ● Open to work
+            </small>
+
+        </div>
+
+
+
+        <!-- Developer -->
+
+        <div class="developer">
+
+
+            <!-- Head -->
+
+            <div class="head">
+
+                <div class="hair"></div>
+
+                <div class="face">
+
+                    <div class="eye eye-left"></div>
+                    <div class="eye eye-right"></div>
+
+                    <div class="smile"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Body -->
+
+            <div class="body">
+
+                <div class="shirt">
+
+                    <span>
+                        &lt;/&gt;
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Left Arm -->
+
+            <div class="arm arm-left"></div>
+
+
+            <!-- Pointing Arm -->
+
+            <div class="arm arm-right">
+
+                <div class="hand">
+
+                    <div class="finger"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Laptop -->
+
+            <div class="laptop">
+
+                <div class="screen">
+
+                    <div>
+                        &gt;_ developer
+                    </div>
+
+                    <div>
+                        Python • Django
+                    </div>
+
+                    <div>
+                        build() ✓
+                    </div>
+
+                </div>
+
+                <div class="keyboard"></div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Pointing message -->
+
+        <div class="point-message">
+
+            <span>
+                ✦
+            </span>
+
+            <div>
+
+                <small>
+                    LET'S CONNECT
+                </small>
+
+                <strong>
+                    Check out my skills
+                    & projects!
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+</body>
+
+</html>

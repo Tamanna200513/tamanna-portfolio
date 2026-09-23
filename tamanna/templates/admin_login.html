@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Tamanna</title>
+
+    <link rel="stylesheet"
+          href="{% static 'tamanna/css/admin.css' %}">
+
+</head>
+
+
+<body>
+
+
+<div class="login-page">
+
+
+    <div class="login-decoration">
+
+        &lt;/&gt;
+
+    </div>
+
+
+    <div class="login-box">
+
+
+        <div class="admin-icon">
+
+            ⚡
+
+        </div>
+
+
+        <div class="login-title">
+
+            <span>
+                PRIVATE AREA
+            </span>
+
+            <h1>
+                Admin Login
+            </h1>
+
+            <p>
+                Tamanna Portfolio Dashboard
+            </p>
+
+        </div>
+
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+                <div class="login-error">
+
+                    {{ message }}
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+
+            <div class="admin-input">
+
+                <label>
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter username"
+                    required>
+
+            </div>
+
+
+            <div class="admin-input">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter password"
+                    required>
+
+            </div>
+
+
+            <button type="submit">
+
+                Login to Dashboard
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+        </form>
+
+
+        <a href="{% url 'home' %}"
+           class="back-home">
+
+            ← Back to portfolio
+
+        </a>
+
+
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

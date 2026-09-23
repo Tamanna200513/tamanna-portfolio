@@ -1,0 +1,282 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Tamanna Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{% static 'tamanna/css/contact.css' %}">
+
+</head>
+
+
+<body>
+
+
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <a href="{% url 'home' %}" class="logo">
+    <div class="logo-mark">
+        <span class="logo-bracket left">&lt;</span>
+
+        <span class="logo-t">T</span>
+
+        <span class="logo-bracket right">/&gt;</span>
+    </div>
+</a>
+
+
+    <a href="{% url 'home' %}"
+       class="back-btn">
+
+        ← Back
+
+    </a>
+
+</nav>
+
+
+
+<!-- Contact -->
+
+<main class="contact-container">
+
+
+    <!-- LEFT SIDE -->
+
+    <section class="contact-info">
+
+
+        <div class="label">
+
+            <span></span>
+
+            GET ME IN TOUCH
+
+        </div>
+
+
+        <h1>
+
+            Let's build
+
+            <strong>
+                something great.
+            </strong>
+
+        </h1>
+
+
+        <p>
+
+            Have an idea, project or opportunity?
+            I'd love to hear from you. Send me a message
+            and I'll get back to you.
+
+        </p>
+
+
+        <div class="contact-details">
+
+
+            <div class="detail">
+
+                <div class="detail-icon">
+                    @
+                </div>
+
+                <div>
+
+                    <small>
+                        EMAIL
+                    </small>
+
+                    <span>
+                        tamannatiwari985@gmail.com
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-icon">
+                    &lt;/&gt;
+                </div>
+
+                <div>
+
+                    <small>
+                        ROLE
+                    </small>
+
+                    <span>
+                        Software Engineer
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FORM -->
+
+    <section class="contact-form-box">
+
+
+        <div class="form-header">
+
+            <span>
+                01
+            </span>
+
+            <h2>
+                Send me a message
+            </h2>
+
+        </div>
+
+
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+                <div class="
+                    form-message
+                    {% if message.tags %}
+                        {{ message.tags }}
+                    {% endif %}
+                ">
+
+                    {{ message }}
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+
+
+        <form method="POST"
+              action="{% url 'contact' %}">
+
+            {% csrf_token %}
+
+
+            <!-- NAME -->
+
+            <div class="input-group">
+
+                <label>
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    maxlength="100"
+                    required>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required>
+
+            </div>
+
+
+
+            <!-- COMMENT -->
+
+            <div class="input-group">
+
+                <label>
+                    Your Message
+                </label>
+
+                <textarea
+                    name="comment"
+                    placeholder="Tell me about your idea..."
+                    rows="6"
+                    required></textarea>
+
+            </div>
+
+
+
+            <!-- SEND -->
+
+            <button type="submit"
+                    class="send-btn">
+
+                <span>
+                    Send Message
+                </span>
+
+                <b>
+                    →
+                </b>
+
+            </button>
+
+
+        </form>
+
+
+    </section>
+
+</main>
+
+
+
+<footer>
+
+    <span>
+        © 2026 Tamanna
+    </span>
+
+    <span>
+        Built with Django &lt;/&gt;
+    </span>
+
+</footer>
+
+
+</body>
+
+</html>

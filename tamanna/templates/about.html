@@ -1,0 +1,293 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About | Tamanna Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{% static 'tamanna/css/about.css' %}">
+
+</head>
+
+
+<body>
+
+
+<!-- Background -->
+
+<!-- <div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div> -->
+
+<!-- Navigation -->
+
+<nav class="navbar">
+<a href="{% url 'home' %}" class="logo">
+    <div class="logo-mark">
+        <span class="logo-bracket left">&lt;</span>
+
+        <span class="logo-t">T</span>
+
+        <span class="logo-bracket right">/&gt;</span>
+    </div>
+</a>
+
+    <a href="{% url 'home' %}" class="back-btn">
+        ← Back
+    </a>
+
+</nav>
+
+
+
+<!-- Main -->
+
+<main class="about-container">
+
+
+    <!-- LEFT -->
+
+    <section class="about-image-section">
+
+
+        <div class="image-frame">
+
+            <div class="image-glow"></div>
+
+            <img
+                src="{% static 'tamanna/images/me.jpeg' %}"
+                alt="Tamanna">
+
+        </div>
+
+
+        <!-- <div class="floating-code code-one">
+            &lt;/&gt;
+        </div>
+
+        <div class="floating-code code-two">
+            { }
+        </div>
+
+        <div class="floating-code code-three">
+            01
+        </div> -->
+
+
+    </section>
+
+
+
+    <!-- RIGHT -->
+
+    <section class="about-content">
+
+
+        <div class="section-label">
+
+            <span></span>
+
+            ABOUT ME
+
+        </div>
+
+
+        <h1>
+
+            Hi, I'm
+
+            <strong>
+                Tamanna
+            </strong>
+
+        </h1>
+
+
+        <h2>
+            Software Engineer & Developer
+        </h2>
+
+
+        <p class="intro">
+
+            I'm a passionate software engineer who enjoys
+            transforming ideas into elegant, scalable and
+            meaningful digital experiences.
+
+        </p>
+
+
+        <p>
+
+            I love working with modern technologies,
+            solving challenging problems and continuously
+            learning new things. My focus is on writing
+            clean code and creating applications that
+            are both useful and enjoyable to use.
+
+        </p>
+
+
+
+        <!-- Skills -->
+
+        <div class="skills">
+
+            <div class="skill">
+                <span>Python</span>
+            </div>
+
+            <div class="skill">
+                <span>Django</span>
+            </div>
+            <div class="skill">
+                <span>FastAPI</span>
+            </div>
+            <div class="skill">
+                <span>Flask</span>
+            </div>
+            <div class="skill">
+                <span>PHP</span>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+            </div>
+
+            <div class="skill">
+                <span>PostgreSQL / SQL</span>
+            </div>
+            <div class="skill">
+                <span>MongoDB</span>
+            </div>
+
+            <div class="skill">
+                <span>HTML5 / CSS3</span>
+            </div>
+            <div class="skill">
+                <span>Tailwind CSS</span>
+            </div>
+            <div class="skill">
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill">
+                <span>Express.js</span>
+            </div>
+            <div class="skill">
+                <span>Next.js</span>
+            </div>
+            <div class="skill">
+                <span>Node.js</span>
+            </div>
+            <div class="skill">
+                <span>REST APIs</span>
+            </div>
+            <div class="skill">
+                <span>React.js</span>
+            </div>
+            <div class="skill">
+                <span>Git</span>
+            </div>
+            <div class="skill">
+                <span>GitHub</span>
+            </div>
+            <div class="skill">
+                <span>Postman</span>
+            </div>
+            <div class="skill">
+                <span>VS Code</span>
+            </div>
+            <div class="skill">
+                <span>ChatGPT</span>
+            </div>
+            <div class="skill">
+                <span>Claude AI</span>
+            </div>
+
+        </div>
+
+
+
+        <!-- Stats -->
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <strong>
+                    11
+                </strong>
+
+                <span>
+                    Months Experience
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    4
+                </strong>
+
+                <span>
+                    Projects
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    ∞
+                </strong>
+
+                <span>
+                    Curiosity
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Buttons -->
+
+        <div class="about-buttons">
+
+            <a href="{% url 'resume' %}"
+               class="primary-btn">
+
+                View Resume →
+
+            </a>
+
+
+            <a href="{% url 'contact' %}"
+               class="secondary-btn">
+
+                Let's Talk
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+</body>
+
+</html>
