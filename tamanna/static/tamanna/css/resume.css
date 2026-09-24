@@ -1171,3 +1171,122 @@ body::after{
 .point-message > span{
     color:#c9aaff !important;
 }
+
+/* =========================================================
+   PROJECT LINKS - FULL BOX CLICKABLE
+========================================================= */
+
+.project-item {
+    width: 100%;
+
+    min-height: 66px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Remove underline from everything inside */
+
+.project-item,
+.project-item:hover,
+.project-item:focus,
+.project-item:active,
+.project-item:visited {
+    text-decoration: none !important;
+}
+
+
+/* Project number */
+
+.project-number {
+    width: 50px;
+
+    flex-shrink: 0;
+
+    color: #a9b4c9;
+
+    font-size: 12px;
+}
+
+
+/* Project title */
+
+.project-item .project-name {
+    margin: 0;
+
+    color: #ffffff !important;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    text-decoration: none !important;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Arrow */
+
+.project-arrow {
+    margin-left: auto;
+
+    color: #c795ff;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    text-decoration: none !important;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover whole box */
+
+.project-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+
+    padding-left: 24px;
+
+    border-color: rgba(180, 140, 255, 0.35);
+}
+
+
+/* Title stays white */
+
+.project-item:hover .project-name {
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+}
+
+
+/* Arrow animation */
+
+.project-item:hover .project-arrow {
+    color: #dcbaff;
+
+    transform: translateX(7px);
+}
+
+
+/* Number hover */
+
+.project-item:hover .project-number {
+    color: #c795ff;
+}
